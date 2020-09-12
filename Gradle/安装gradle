@@ -1,0 +1,18 @@
+## grandle
+
+#### 安装
+
+1. [下载网址](<http://services.gradle.org/distributions/>)，选择想要安装的发布版本，gradle-x.x-bin.zip是需要下载的安装发布版，gradle-x.x-src.zip是源码，gradle-x.x-all.zip则是下载全部的文件。
+2. Gradle下载的源码不需要安装，我们将下载的压缩包在本机的目录下直接解压即可。
+3. 接下来我们为Gradle配置环境变量，安装过jdk的朋友对环境变量的配置应该不陌生了。我们右键**“这台电脑”-->"属性"-->"高级系统设置"-->"环境变量"-->"系统变量"**，按照上述步骤找到**环境变量**设置的位置。我们需要修改**Path变量**，将Gradle的bin目录添加进去，我们在Path变量的最后面添加**;E:\Program Files\gradle-4.4-bin\bin**，注意前面的分号(;)一定不能少。
+4. 配置完成后我们查看一下本机安装的gradle的版本信息，使用快捷键Win+R弹出的输入框中输入cmd，然后打开命令窗口，在命令窗口中输入**gradle -v**可以查看到gradle的版本信息。
+5. 最后我们通过命令行来执行创建命令，我们将命令行的目录切换到gradle的build.gradle文件同级目录下，然后执行gradle build，提示创建成功，查看build.gradle文件所在的目录，发现多了.gradle和build目录。
+
+#### 学习使用grandle管理项目
+
+* 项目结构解析
+  * gradlew、gradlew.bat是gradle的脚本，运行能够自动搭建gradle环境
+  * .gradle、build目录是使用gradle编译（gradle build）之后就会生成
+  * wrapper 如果没有安装gradle，可以直接使用wrapper来构建
+  * src是我们的项目源码
+  * build.gradle是我们的配置文件，专门用来存放我们的项目依赖，类似于我们maven的application.properties。
