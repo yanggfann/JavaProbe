@@ -1,5 +1,12 @@
 ## Java基础语法
 
+####Java学习资料
+* [Java教学网站](<https://www.tutorialspoint.com/java/index.htm>)
+* 安装jdk
+  * [Windows环境安装Java](<http://www.cnblogs.com/liuhongfeng/p/4177568.html>)
+  * [Ubuntu环境下安装Java](<http://topspeedsnail.com/ubuntu16-install-java-jdk/>)
+  * [Mac环境下安装Java](<https://www.jianshu.com/p/0036a344509e>)
+
 #### 对象、类、方法、实例变量
 
 * **对象**：对象是类的一个实例，有状态和行为。

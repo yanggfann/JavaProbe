@@ -2,6 +2,11 @@
 
 * [下载地址](http://www.junit.org)，下载最新版本的Junit.jar
 
+# Junit学习资料
+[junit教学网站](<https://www.tutorialspoint.com/junit/index.htm>)
+
+[junit5官方文档](<https://junit.org/junit5/>)
+
 * 设置Junit环境
 
   1. 将JUNIT_HOME环境变量设置为指向计算机上存储JUNIT jar的基目录位置。
