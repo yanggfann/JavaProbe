@@ -5,37 +5,7 @@
 1. 找出具有共同属性和行为的对象，用继承来防止子类中出现重复的程序代码。
 2. 设计代表共同状态与行为的类
 
-```mermaid
- classDiagram
-      Animal <|-- Lion
-      Animal <|-- Hippo
-      Animal <|-- Tiger
-      Animal <|-- Dog
-      Animal <|-- Cat
-      Animal <|-- Wolf
-      Animal : picture
-      Animal : food
-      Animal : hunger
-      Animal : boundaries
-      Animal : location
-      Animal: makeNoise()
-      Animal: eat()
-      Animal: sleep()
-      Animal: roam()
-      class Duck{
-          +String beakColor
-          +swim()
-          +quack()
-      }
-      class Fish{
-          -int sizeInFeet
-          -canEat()
-      }
-      class Zebra{
-          +bool is_wild
-          +run()
-      }
-```
+![继承](https://github.com/yanggfann/JavaProbe/blob/master/Java/page/%E7%B1%BB%E5%9B%BE1.png)
 
 3. 决定子类是否需要让某项行为（也就是方法的实现）有特定不同的运作方式，对Animal而言，我们认为eat()和makeNoise()应该由各个子类自行覆盖。
 
