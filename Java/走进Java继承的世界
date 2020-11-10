@@ -1,0 +1,196 @@
+# 继承
+“子类继承父类”，继承的关系意味着子类继承了父类的方法。当提及“类的成员”时，成员的意思就是实例变量和方法。
+
+## 设计继承
+1. 找出具有共同属性和行为的对象，用继承来防止子类中出现重复的程序代码。
+2. 设计代表共同状态与行为的类
+
+```mermaid
+ classDiagram
+      Animal <|-- Lion
+      Animal <|-- Hippo
+      Animal <|-- Tiger
+      Animal <|-- Dog
+      Animal <|-- Cat
+      Animal <|-- Wolf
+      Animal : picture
+      Animal : food
+      Animal : hunger
+      Animal : boundaries
+      Animal : location
+      Animal: makeNoise()
+      Animal: eat()
+      Animal: sleep()
+      Animal: roam()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+```
+
+3. 决定子类是否需要让某项行为（也就是方法的实现）有特定不同的运作方式，对Animal而言，我们认为eat()和makeNoise()应该由各个子类自行覆盖。
+
+```mermaid
+ classDiagram
+      Animal <|-- Lion
+      Animal <|-- Hippo
+      Animal <|-- Tiger
+      Animal <|-- Dog
+      Animal <|-- Cat
+      Animal <|-- Wolf
+      Animal : picture
+      Animal : food
+      Animal : hunger
+      Animal : boundaries
+      Animal : location
+      Animal: makeNoise()
+      Animal: eat()
+      Animal: sleep()
+      Animal: roam()
+      class Lion{
+          makeNoise()
+          eat()
+      }
+      class Hippo{
+          makeNoise()
+          eat()
+      }
+      class Tiger{
+          makeNoise()
+          eat()
+      }
+      class Dog{
+          makeNoise()
+          eat()
+      }
+      class Cat{
+          makeNoise()
+          eat()
+      }
+      class Wolf{
+          makeNoise()
+          eat()
+      }
+```
+
+4. 通过寻找使用共同行为的子类来找出更多抽象化的机会，Wolf与Dog都属于犬科，Lion、Tiger、Cat都属于猫科，在漫步roam方面每个种类都有一些共同的行为。
+
+5. 完成类的继承层次
+
+```mermaid
+ classDiagram
+      Animal <|-- Feline
+      Feline <|-- Lion
+      Feline <|-- Tiger
+      Feline <|-- Cat
+      Animal <|-- Canine
+      Canine <|-- Dog
+      Canine <|-- Wolf
+      Animal <|-- Hippo
+      Animal : picture
+      Animal : food
+      Animal : hunger
+      Animal : boundaries
+      Animal : location
+      Animal: makeNoise()
+      Animal: eat()
+      Animal: sleep()
+      Animal: roam()
+      class Lion{
+          makeNoise()
+          eat()
+      }
+      class Hippo{
+          makeNoise()
+          eat()
+      }
+      class Tiger{
+          makeNoise()
+          eat()
+      }
+      class Dog{
+          makeNoise()
+          eat()
+      }
+      class Cat{
+          makeNoise()
+          eat()
+      }
+      class Wolf{
+          makeNoise()
+          eat()
+      }
+      class Feline{
+          roam()
+      }
+      class Canine{
+          roam()
+      }
+```
+
+## 继承的调用顺序
+当你调用对象引用的方法时，你会调用到与该对象类型最接近的方法。换句话说，最低阶的会胜出。
+
+“最低阶”的意思就是在层次树的最下方。
+
+Wolf w = new Wolf();
+w.makeNoise(); 会调用Wolf的版本
+w.roam(); 会调用Canine的版本
+w.eat(); 会调用Wolf的版本
+w.sleep(); 会调用Animal的版本
+
+## 如何判断继承关系
+**“是一个”**，当某物继承另一物时，则满足IS-A的条件。
+如果类Y继承类X，且类Y是类Z的父类，则Z IS-A X。
+
+## 如何在子类中引用父类的方法再加上额外的行为
+可以在父类中设计出所有子类都适用的功能实现。让子类可以不用完全覆盖掉父类的功能，只是再加上额外的行为。可以通过super这个关键词来取用父类。
+
+```
+public void roam() {
+	super.roam();
+	// my own roam stuff
+}
+该方法会先执行super版的roam()，然后再执行sub版自定义的行为或功能。
+```
+
+## 要点
+* 子类是extends父类出来的
+* 子类会继承父类所有public类型的实例变量和方法，但不会继承父类所有private类型的变量和方法
+* 继承下来的方法可以被覆盖掉，但实例变量不能被覆盖掉
+* 使用IS-A测试来验证继承结构的合理性
+* IS-A关系是单方面的，河马是动物，但动物不一定是河马
+* 当某个方法在子类中被覆盖过，调用这个方法时会调用到覆盖过的版本
+* 如果Y是extends类X，且类Y是类Z的父类，则Z IS-A X。
+
+## 继承的意义
+* 避免了重复的程序代码
+* 定义出共同的协议
+
+## 对象声明、创建与赋值的3个步骤
+1. 声明一个引用变量：Dog myDog = **new Dog();**
+要求Java虚拟机分配空间给引用变量，并将此变量命名为myDog。此饮用将永远被固定为Dog类型。
+2. 创建对象，引用类型  **Dog myDog** = new Dog();
+要求Java虚拟机分配堆空间给新建立的Dog对象。
+运用多态时，引用类型可以是实际对象类型的父类。
+3. 连接对象和引用  Dog myDog **=** new Dog();
+将新的Dog赋值给myDog这个饮用变量。换言之就是设定遥控器。
+
+## 子类覆盖父类方法的规则
+1. 参数必须要一样，且返回类型必须要兼容
+2. 不能降低方法的存取权限
+
+## 方法的重载
+重载与多态毫无关系，重载的方法与覆盖方法不同。
+1. 重载的方法，返回类型可以不同，主要使用不同的参数即可
+2. 不能只改变返回类型
+3. 可以更改存取权限
