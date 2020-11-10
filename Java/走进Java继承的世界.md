@@ -5,17 +5,17 @@
 1. 找出具有共同属性和行为的对象，用继承来防止子类中出现重复的程序代码。
 2. 设计代表共同状态与行为的类
 
-![继承](https://raw.githubusercontent.com/yanggfann/JavaProbe/master/Java/page/走进Java继承的世界-继承类图1.png)
+![继承](https://raw.githubusercontent.com/yanggfann/JavaProbe/master/Java/page/走进Java继承的世界-类图1.png)
 
 3. 决定子类是否需要让某项行为（也就是方法的实现）有特定不同的运作方式，对Animal而言，我们认为eat()和makeNoise()应该由各个子类自行覆盖。
 
-![继承](https://raw.githubusercontent.com/yanggfann/JavaProbe/master/Java/page/走进Java继承的世界-继承类图2.png)
+![继承](https://raw.githubusercontent.com/yanggfann/JavaProbe/master/Java/page/走进Java继承的世界-类图2.png)
 
 4. 通过寻找使用共同行为的子类来找出更多抽象化的机会，Wolf与Dog都属于犬科，Lion、Tiger、Cat都属于猫科，在漫步roam方面每个种类都有一些共同的行为。
 
 5. 完成类的继承层次
 
-![继承](https://raw.githubusercontent.com/yanggfann/JavaProbe/master/Java/page/走进Java继承的世界-继承类图3.png)
+![继承](https://raw.githubusercontent.com/yanggfann/JavaProbe/master/Java/page/走进Java继承的世界-类图3.png)
 
 ## 继承的调用顺序
 当你调用对象引用的方法时，你会调用到与该对象类型最接近的方法。换句话说，最低阶的会胜出。
