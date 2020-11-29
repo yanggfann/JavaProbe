@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d64d36cb-93bb-45a9-a217-cf26fdce0963" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java/Java8/1 为什么要关心Java8/1.2 Java中的函数 -- 方法引用::和Lambda" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/Java8/1.1 Java怎么还在变" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Java8/1 为什么要关心Java8/1.1 Java怎么还在变" afterDir="false" />
-    </list>
+    <list default="true" id="d64d36cb-93bb-45a9-a217-cf26fdce0963" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +143,7 @@
         <option value="$PROJECT_DIR$/Java/走进Java继承的世界.md" />
         <option value="$PROJECT_DIR$/Java/Java8/1.1 Java怎么还在变" />
         <option value="$PROJECT_DIR$/Java/Java8/为什么要关心Java8/1.2 Java中的函数" />
+        <option value="$PROJECT_DIR$/Java/Java8/1 为什么要关心Java8/1.2 Java中的函数 -- 方法引用::和Lambda" />
       </list>
     </option>
   </component>
@@ -280,7 +277,7 @@
       <workItem from="1605014937902" duration="1376000" />
       <workItem from="1605016753846" duration="283000" />
       <workItem from="1605019665002" duration="700000" />
-      <workItem from="1606314995414" duration="5853000" />
+      <workItem from="1606314995414" duration="6542000" />
     </task>
     <task id="LOCAL-00001" summary="java 面向对象">
       <created>1599878206590</created>
@@ -415,16 +412,23 @@
       <option name="project" value="LOCAL" />
       <updated>1606318098483</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="java8 - Java中的函数 -- 方法引用::和Lambda">
+      <created>1606403788550</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1606403788550</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13934000" />
+    <option name="totallyTimeSpent" value="14623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18192919" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18192919" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -438,13 +442,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32959184" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Anonymous Apex" order="10" />
       <window_info anchor="bottom" id="Log Analyzer" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="SOQL Query" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -513,7 +517,8 @@
     <MESSAGE value="走进Java继承的世界" />
     <MESSAGE value="走进Java继承的世界,插入图" />
     <MESSAGE value="java8 - Java怎么还在变" />
-    <option name="LAST_COMMIT_MESSAGE" value="java8 - Java怎么还在变" />
+    <MESSAGE value="java8 - Java中的函数 -- 方法引用::和Lambda" />
+    <option name="LAST_COMMIT_MESSAGE" value="java8 - Java中的函数 -- 方法引用::和Lambda" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Junit/设置Junit环境.md">
